@@ -16,11 +16,14 @@ run_step() {
   local out
   out="$("$@" 2>&1)"
   local code=$?
+  # Reçu machine-indépendant (correction Rouge 2026-09-13) : les chemins
+  # absolus du poste sont normalisés avant scellement.
+  out="$(printf '%s' "$out" | sed "s|$ROOT|<ROOT>|g")"
   local sha
   sha="$(printf '%s' "$out" | sha256sum | cut -d' ' -f1)"
   {
     echo "### $name"
-    echo "commande : \`$*\`"
+    echo "commande : \`$(printf '%s' "$*" | sed "s|$ROOT|<ROOT>|g")\`"
     echo "exit : $code"
     echo "sha256 : $sha"
   } >> "$PROOF"
@@ -28,7 +31,7 @@ run_step() {
 }
 
 step "Rejeu phase 2 (tests + terrain + juge)"
-run_step "tests core (pytest)" bash -c "cd '$ROOT' && python3 -m pytest -q -p no:cacheprovider -o color=no 2>&1 | sed -E 's/ in [0-9]+\\.[0-9]+s//'"
+run_step "tests core (pytest)" bash -c "cd '$ROOT' && python3 -m pytest -q -p no:cacheprovider 2>&1 | sed -E 's/ in [0-9]+\\.[0-9]+s//'"
 run_step "terrain generate" bash -c "cd '$ROOT/examples/TERRAIN-01' && python3 generate.py"
 run_step "terrain run_core" bash -c "cd '$ROOT/examples/TERRAIN-01' && python3 run_core.py"
 run_step "expected.json sha" bash -c "cd '$ROOT/examples/TERRAIN-01' && sha256sum expected.json"
