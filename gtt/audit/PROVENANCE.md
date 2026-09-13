@@ -24,7 +24,8 @@ re-vérifiables par `git ls-remote`.
 | quantum/qpu_connectors | github.com/jonathansearch/QPU-Ratiss-COSMOS | `00eecbd63a9a18ad374b0fc8da84b9f6de2b8977` | réécrit | EN ATTENTE |
 | quantum/decoherence | github.com/jonathansearch/RATISS-QPU-AMBIENT | `0e7a6f3614f798f480571cdc43671fb51e5f98ec` | réécrit | EN ATTENTE |
 | quantum/decoherence | github.com/jonathansearch/ratiss-topological-decoherence-engine | `ab13ba369087345b281f078036797599ba60313b` | réécrit | EN ATTENTE |
-| world_models | (phase 4) | — | — | EN ATTENTE |
+| world_models | github.com/jonathansearch/ratiss-lewm-integration | `68a1921b8cf720c80bacaab91ae6fd808cf27337` | réécrit (méthode) | EN ATTENTE |
+| world_models (dynamiques) | méthode neuve — vérités analytiques (harmonique, Euler (1+ω²dt²)^t) | aucun code source | neuf | EN ATTENTE |
 | forecast | (phase 5) | — | — | EN ATTENTE |
 | agents | (phase 6) | — | — | EN ATTENTE |
 | receipts | (phase 7) | — | — | EN ATTENTE |
@@ -46,3 +47,11 @@ phase 2 jugée « trop longue » — divulgation intégrale, règle N2 respecté
 colonne auditeur laissée `EN ATTENTE` puisque constructeur et auditeur
 seraient la même main. SHAs sources relevés anonymement le 2026-09-13
 (`git ls-remote`), dépôts publics.
+
+
+## Phase 4 — couche world_models (relais Rouge, ordre du chef 2026-09-13)
+
+Construction par Rouge (le Bleu est indisponible, réaffecté par le chef).
+Paramètres scellés AVANT le code (R6, commit `0f06028`). Pont réel
+LeWM/JEPA : campagne ultérieure, inférence seule, jamais de réentraînement.
+Colonne auditeur `EN ATTENTE` : constructeur ≠ auditeur.
