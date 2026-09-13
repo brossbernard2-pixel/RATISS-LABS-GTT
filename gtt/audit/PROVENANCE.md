@@ -19,7 +19,11 @@ re-vérifiables par `git ls-remote`.
 | core | github.com/jonathansearch/RATISS-V10-Physical-Complexity-Audit | `60e9d68788f031fa972de00570f2bcf6083a6455` | réécrit | EN ATTENTE |
 | core | github.com/jonathansearch/ratiss-topological-decoherence-engine | `ab13ba369087345b281f078036797599ba60313b` | réécrit | EN ATTENTE |
 | core | github.com/jonathansearch/RATISS-GRID | `864db22e0610533fa132943fa577d60333fc527d` | réécrit | EN ATTENTE |
-| quantum | (phase 3) | — | — | EN ATTENTE |
+| quantum/lanczos, mps_dmrg | github.com/jonathansearch/Algorithmes-quantique-Ratiss-labs- | `533d2647c16731fd78b1f8e01ae6580a8da83ec3` | réécrit | EN ATTENTE |
+| quantum/mps_dmrg | github.com/jonathansearch/Travaux | `a341bf7392264c722be343d9c87e526fbf1c2a98` | réécrit | EN ATTENTE |
+| quantum/qpu_connectors | github.com/jonathansearch/QPU-Ratiss-COSMOS | `00eecbd63a9a18ad374b0fc8da84b9f6de2b8977` | réécrit | EN ATTENTE |
+| quantum/decoherence | github.com/jonathansearch/RATISS-QPU-AMBIENT | `0e7a6f3614f798f480571cdc43671fb51e5f98ec` | réécrit | EN ATTENTE |
+| quantum/decoherence | github.com/jonathansearch/ratiss-topological-decoherence-engine | `ab13ba369087345b281f078036797599ba60313b` | réécrit | EN ATTENTE |
 | world_models | (phase 4) | — | — | EN ATTENTE |
 | forecast | (phase 5) | — | — | EN ATTENTE |
 | agents | (phase 6) | — | — | EN ATTENTE |
@@ -34,3 +38,11 @@ Rouge 2026-09-13 : la première rédaction indiquait à tort
 Le terrain TERRAIN-01 est une réécriture de l'idée RATISS-GRID (même ligne
 source ci-dessus). Vérification des SHAs : `git ls-remote
 https://github.com/jonathansearch/<nom>.git HEAD`.
+
+## Phase 3 — couche quantum (relais Rouge, ordre du chef 2026-09-13)
+
+Construction par Rouge (pas le Bleu) sur ordre direct « Continue » après
+phase 2 jugée « trop longue » — divulgation intégrale, règle N2 respectée :
+colonne auditeur laissée `EN ATTENTE` puisque constructeur et auditeur
+seraient la même main. SHAs sources relevés anonymement le 2026-09-13
+(`git ls-remote`), dépôts publics.
