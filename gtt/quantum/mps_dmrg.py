@@ -1,7 +1,7 @@
 """Tenseurs MPS et DMRG pour états produits matriciels.
 
 Phase 3 (source Algorithmes-quantique-Ratiss-labs-, Travaux).
-Phase 1 : squelette.
+Aucun calcul avant la phase 3 ; signatures verrouillées (R5).
 """
 
 
@@ -16,5 +16,5 @@ def dmrg_sweep(mps: object, hamiltonian: object, params: dict) -> object:
 
 
 def truncate_bond_dimension(mps: object, max_bond: int) -> object:
-    """Tronque les liens MPS à max_bond. Pas de calcul en phase 1."""
+    """Tronque les liens MPS à max_bond. Pas de calcul en phase 3."""
     raise NotImplementedError("phase 3")

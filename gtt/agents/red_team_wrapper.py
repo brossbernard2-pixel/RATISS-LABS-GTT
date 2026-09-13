@@ -8,9 +8,9 @@ protocole (docs/PROTOCOL.md), jamais par ce code.
 
 def run_check(module: str, args: list, params: dict) -> dict:
     """Exécute une primitive du juge et renvoie {verdict, exit, output}."""
-    raise NotImplementedError("phase 2")
+    raise NotImplementedError("phase 6")
 
 
 def audit_against(manifest: dict, seal: str) -> tuple[bool, str]:
     """Re-scelle un manifeste et compare au scellé (ratiss.seal)."""
-    raise NotImplementedError("phase 2")
+    raise NotImplementedError("phase 6")

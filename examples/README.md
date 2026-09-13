@@ -1,7 +1,9 @@
 # examples
 
-Terrains d'épreuve et rapports d'exemple (phases 2–6).
+Terrains d'épreuve et rapports d'exemple.
 
-Phase 1 : rien ici. Les terrains sources seront référencés par URL+version
-(RATISS-BIOLAB, RATISS-GRID, RATISS-HPC — voir prompt §7.3) et serviront
-après migration provenancée.
+- `TERRAIN-01/` : grille synthétique (phase 2, seed 20260913), inspirée de
+  RATISS-GRID — réécriture provenancée (voir gtt/audit/PROVENANCE.md).
+- Les terrains sources (RATISS-BIOLAB, RATISS-HPC, etc.) seront référencés
+  par URL+version sur le plan « examples terrains = phase 7 » et serviront
+  après migration provenancée.

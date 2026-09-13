@@ -1,6 +1,7 @@
 """Pont LEWM (modèle du monde) — intégration de modèles.
 
-Phase 4 (source ratiss-lewm-integration). Phase 1 : squelette.
+Phase 4 (source ratiss-lewm-integration).
+Squelette jusqu'à la phase 4.
 """
 
 
