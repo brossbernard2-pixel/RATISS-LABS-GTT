@@ -1,0 +1,23 @@
+{
+  "coherence_score": 1.0,
+  "instable": {
+    "amplitude_decroissante": false,
+    "amplitude_finale": 4.60735959433,
+    "amplitude_initiale": 1.001,
+    "graine_von_neumann": 0.001,
+    "masse_conserv\u00e9e": true,
+    "r": 0.6,
+    "violation_masse": 0.0
+  },
+  "modele": "chaleur 1D Neumann miroir",
+  "stable": {
+    "amplitude_decroissante": true,
+    "amplitude_finale": 0.405814158613,
+    "amplitude_initiale": 1.001,
+    "graine_von_neumann": 0.001,
+    "masse_conserv\u00e9e": true,
+    "r": 0.4,
+    "violation_masse": 0.0
+  },
+  "terrain": "TERRAIN-03"
+}

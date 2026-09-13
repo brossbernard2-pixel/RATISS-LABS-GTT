@@ -1,0 +1,13 @@
+{
+  "betti_reseau": [
+    1,
+    1
+  ],
+  "coherence_score": 1.0,
+  "conservation_ok": true,
+  "conservation_violation": 0.0,
+  "modele": "SIR discret (beta=0.3, gamma=0.1, N=1000, 30 pas)",
+  "perturbation_detectee": true,
+  "perturbation_violation": 1e-06,
+  "terrain": "TERRAIN-02"
+}
