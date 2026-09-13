@@ -1,8 +1,43 @@
 {
   "layer": "quantum",
   "params": {
-    "purpose": "lanczos, mps_dmrg, decoherence, qpu_connectors"
+    "decoherence": {
+      "channels": [
+        "dephasing",
+        "amplitude_damping"
+      ],
+      "class_thresholds": {
+        "good_rate_max": 0.01,
+        "mid_rate_max": 0.02
+      },
+      "entropy_unit": "bits",
+      "models": {
+        "coherence_time": "t2_star",
+        "rate": "exp_t2_harmonic"
+      }
+    },
+    "lanczos": {
+      "extremal": "lowest",
+      "max_iter": 64,
+      "reorthogonalization": "full",
+      "seed": 20260913,
+      "tolerance": 1e-10
+    },
+    "mps_dmrg": {
+      "ed_jacobi_tol": 1e-14,
+      "max_bond_default": 4,
+      "model": "tfim_open",
+      "n_max_dense": 8,
+      "svd": "jacobi",
+      "sweeps_default": 2
+    },
+    "qpu": {
+      "live": "NotImplementedError — campagne M2-M4 du chef",
+      "mode": "dry-run",
+      "plan": "open-plan",
+      "token_env": "IBM_TOKEN"
+    }
   },
-  "status": "skeleton",
-  "version": "0.1.0"
+  "status": "implemented-p3",
+  "version": "0.2.0"
 }
