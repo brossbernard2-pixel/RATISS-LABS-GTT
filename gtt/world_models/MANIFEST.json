@@ -1,8 +1,44 @@
 {
   "layer": "world_models",
   "params": {
-    "purpose": "lewm_bridge, coherence_audit, correction, ablation"
+    "ablation": {
+      "component": "correction",
+      "metric": "energy_violation_max",
+      "reps": 3
+    },
+    "audit": {
+      "steps": 10,
+      "tol": 1e-09,
+      "violation": "max |E_t - E_0| / E_0",
+      "x0s": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.5,
+          0.5
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "correction": {
+      "model_touche": "jamais (correction en aval seulement)",
+      "type": "energy_rescale",
+      "verdict_required": "APPROVED"
+    },
+    "dynamics": {
+      "dt": 0.1,
+      "exact": "harmonic_analytic",
+      "gain": 0.0,
+      "learned": "euler_gain",
+      "note": "surrogate synthetique ; pont reel LeWM/JEPA = campagne later, inference seule, jamais de reentrainement",
+      "omega": 1.0
+    }
   },
-  "status": "skeleton",
-  "version": "0.1.0"
+  "status": "implemented-p4",
+  "version": "0.2.0"
 }
