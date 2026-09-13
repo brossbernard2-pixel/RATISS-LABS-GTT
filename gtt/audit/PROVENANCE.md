@@ -26,12 +26,16 @@ re-vérifiables par `git ls-remote`.
 | quantum/decoherence | github.com/jonathansearch/ratiss-topological-decoherence-engine | `ab13ba369087345b281f078036797599ba60313b` | réécrit | EN ATTENTE |
 | world_models | github.com/jonathansearch/ratiss-lewm-integration | `68a1921b8cf720c80bacaab91ae6fd808cf27337` | réécrit (méthode) | EN ATTENTE |
 | world_models (dynamiques) | méthode neuve — vérités analytiques (harmonique, Euler (1+ω²dt²)^t) | aucun code source | neuf | EN ATTENTE |
-| forecast | (phase 5) | — | — | EN ATTENTE |
-| agents | (phase 6) | — | — | EN ATTENTE |
-| receipts | (phase 7) | — | — | EN ATTENTE |
+| forecast | github.com/jonathansearch/metac-bot-template (couche Jonathan seule) | `ab2397d347ac777dbfbe1c0e629fc3272de0f6c8` | réécrit | EN ATTENTE |
+| agents | github.com/jonathansearch/ratiss-cypher-odv-scientist-v3 | `d7083f78c80cedddc544193c30d1b69360357777` | réécrit | EN ATTENTE |
+| agents | github.com/jonathansearch/ratiss-scientist-agent | `d07619cf4f1675f7b090f74962f81e1e6bb066f2` | réécrit | EN ATTENTE |
+| receipts | github.com/jonathansearch/Ratiss-Fusion-stark- (historique gelé) | `e1217791e9691a221d49221b763fa773ebbd6994` | reconstruit (neuf) | EN ATTENTE |
 | audit | aucun | — | squelette | EN ATTENTE |
-| viz | (phase 6) | docstrings | — | EN ATTENTE |
-| io | (phase 6) | docstrings | — | EN ATTENTE |
+| viz | github.com/jonathansearch/ratiss-decoherence-atlas | `d4225414583005de049db1d48061f264e04b81bc` | réécrit (méthode visuelle) | EN ATTENTE |
+| viz | github.com/jonathansearch/quantum-circuit-studio | `793ab9d1eb8e95c027160d5c6acd6ed1a110b98f` | réécrit (méthode visuelle) | EN ATTENTE |
+| io | méthode neuve (PDB wwPDB public, APIs OSF/GitHub documentées) | aucun code source | neuf | EN ATTENTE |
+| examples/TERRAIN-02 | github.com/jonathansearch/RATISS-BIOLAB | `7b9455ba61c94aaecd1610fb67a890c396c0341d` | réécrit | EN ATTENTE |
+| examples/TERRAIN-03 | github.com/jonathansearch/RATISS-HPC | `5aae7f4f8929af4ea8a49e90dfaca100ae901e4f` | réécrit | EN ATTENTE |
 
 Toutes les sources sont sur le compte public `jonathansearch` (correction
 Rouge 2026-09-13 : la première rédaction indiquait à tort
@@ -55,3 +59,15 @@ Construction par Rouge (le Bleu est indisponible, réaffecté par le chef).
 Paramètres scellés AVANT le code (R6, commit `0f06028`). Pont réel
 LeWM/JEPA : campagne ultérieure, inférence seule, jamais de réentraînement.
 Colonne auditeur `EN ATTENTE` : constructeur ≠ auditeur.
+
+
+## Phases 5–7 — forecast, agents/receipts/viz/io, examples (relais Rouge, ordre du chef 2026-09-13)
+
+Construction par Rouge (« lance tous les protocoles en même temps »).
+Paramètres scellés AVANT le code (R6, commit `9990d7e`). Lean proof :
+stub EN ATTENTE respecté (C5) — aucun reçu fabriqué. Bot Metaculus :
+hors-ligne et désarmé par construction (plafond 200, soumission réelle
+interdite dans le dépôt). Syncs OSF/GitHub : dry-run, tokens par
+environnement jamais echo. Orphelins : `docs/ORPHELINS.md`, 14 tombstones
+avec SHAs relevés anonymement — jamais copiés, jamais supprimés.
+Colonnes auditeur `EN ATTENTE` : constructeur ≠ auditeur.
