@@ -71,3 +71,22 @@ interdite dans le dépôt). Syncs OSF/GitHub : dry-run, tokens par
 environnement jamais echo. Orphelins : `docs/ORPHELINS.md`, 14 tombstones
 avec SHAs relevés anonymement — jamais copiés, jamais supprimés.
 Colonnes auditeur `EN ATTENTE` : constructeur ≠ auditeur.
+
+## Campagne externe world_models — run réel LeWM/TwoRooms (2026-09-13, relais Rouge)
+
+| artefact | source | SHA / empreinte | nature | visa chef |
+|---|---|---|---|---|
+| scripts/wm_externe_lewm.py | github.com/lucas-maes/le-wm (code officiel LeWM) | `8edfeb336732b5f3ce7b8b210d0ba370a09e2cac` | import par dépendance git à SHA scellé — **zéro copie** | EN ATTENTE |
+| checkpoint TwoRooms | Hugging Face `quentinll/lewm-tworooms` (public, non gaté) | poids sha256 `566f223624ea4bfb39dbfe6ae731198dd6ea73b7b8919fed6b1ecafca810f7dd` | inférence seule, chargement state_dict STRICT | EN ATTENTE |
+| environnement TwoRooms | github.com/lucas-maes/stable-worldmodel (pip `stable-worldmodel`) | réf. repo `c77287402cd435928a2b6cbfa56c0fae4348f6c2` | dépendance pip, aucun code copié | EN ATTENTE |
+| reçu | proofs/WM-EXTERNE-LEWM-20260913-*.md | delta publié 0.626131533384 (APPROVED) | mesure originale GTT | EN ATTENTE |
+
+Divulgations : (1) les statistiques exactes du scaler d'actions du
+dataset d'entraînement (3,4 Go, non téléchargé) ne sont pas fournies avec
+le checkpoint → deux variantes documentées (V1 raw, V2 z-score uniforme),
+règle de sélection pré-enregistrée (argmin erreur un pas ancré), les DEUX
+publiées dans le reçu ; V1 retenue. (2) Portée : une trajectoire, un seed
+(13), métrique latente = contrat JEPA ; aucune généralisation revendiquée.
+(3) transformers v4 exigé (nommage ViT du checkpoint) ; versions exactes
+dans le reçu. (4) Run construit et exécuté par Rouge en relais (ordre du
+chef) — auditeur indépendant EN ATTENTE, kit : docs/AUDIT-INDEPENDANT-KIT.md.
