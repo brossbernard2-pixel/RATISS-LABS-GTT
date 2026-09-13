@@ -1,0 +1,8 @@
+{
+  "layer": "viz",
+  "params": {
+    "purpose": "topology_3d, coherence_atlas, proof_graph (phase 6)"
+  },
+  "status": "skeleton",
+  "version": "0.1.0"
+}

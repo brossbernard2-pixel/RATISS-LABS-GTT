@@ -1,0 +1,41 @@
+{
+  "seals": [
+    {
+      "layer": "core",
+      "sha256": "17075fed11e6ba8dd0f4184a983dfee246cedfc0527b08abf5199b7460f34966"
+    },
+    {
+      "layer": "quantum",
+      "sha256": "1eda8203231d181b4245eb4fd5dc1c803ececa91d7b2d682ef7023cf98f679a8"
+    },
+    {
+      "layer": "world_models",
+      "sha256": "2ed1d7285eed7a3859c0ece3071ea53b53df16272e1a5ba5ddc01980fd63f2b4"
+    },
+    {
+      "layer": "forecast",
+      "sha256": "d88b955814cdf767732e0308de9bcffd8800854705a1b8b6d2c6a4086914ffc6"
+    },
+    {
+      "layer": "agents",
+      "sha256": "c3c022393a896fd9f8263b2db57f12251bd9dfe4ce3fb7a270f77c2ace9a5ed7"
+    },
+    {
+      "layer": "receipts",
+      "sha256": "834891edbee48c456d111f6be1cce133554032112a5c68215b98d5353d2b5647"
+    },
+    {
+      "layer": "audit",
+      "sha256": "0fc1e0931049b26028fd343508051bbf62ca3fe9280ffe32f0fa75630425822a"
+    },
+    {
+      "layer": "viz",
+      "sha256": "18cbdff903e3573e1a01776cead9827eda2e3bd773914db5b20a7398a0ff2f11"
+    },
+    {
+      "layer": "io",
+      "sha256": "5b2cf592377a13d96b1c26d0a5a68a5394f9d8fa4c3ca7224b26824f10d66d7b"
+    }
+  ],
+  "version": "0.1.0"
+}

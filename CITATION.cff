@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Si ce logiciel participe à une publication, merci de le citer."
+title: "RATISS-LABS-GTT"
+authors:
+  - family-names: "Evina"
+    given-names: "Jonathan"
+    orcid: ""
+date-released: "2026-09-13"
+version: "0.1.0"
+license: "MIT"
+url: "https://github.com/brossbernard2-pixel/RATISS-LABS-GTT"

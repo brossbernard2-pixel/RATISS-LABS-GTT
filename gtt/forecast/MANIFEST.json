@@ -1,0 +1,8 @@
+{
+  "layer": "forecast",
+  "params": {
+    "purpose": "metaculus_bot, calibration, sealed_predictions, journal"
+  },
+  "status": "skeleton",
+  "version": "0.1.0"
+}

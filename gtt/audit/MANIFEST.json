@@ -1,0 +1,8 @@
+{
+  "layer": "audit",
+  "params": {
+    "purpose": "hooks juge (CLI couche 1), provenance, deviation_log"
+  },
+  "status": "skeleton",
+  "version": "0.1.0"
+}

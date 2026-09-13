@@ -1,0 +1,8 @@
+{
+  "layer": "io",
+  "params": {
+    "purpose": "pdb_loader, osf_sync, github_sync (phase 6)"
+  },
+  "status": "skeleton",
+  "version": "0.1.0"
+}

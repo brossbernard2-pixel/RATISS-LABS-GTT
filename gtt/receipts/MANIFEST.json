@@ -1,0 +1,8 @@
+{
+  "layer": "receipts",
+  "params": {
+    "purpose": "lean_proof (EN ATTENTE), replayable_hash, verification"
+  },
+  "status": "skeleton",
+  "version": "0.1.0"
+}

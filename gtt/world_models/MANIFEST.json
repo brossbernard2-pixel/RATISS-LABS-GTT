@@ -1,0 +1,8 @@
+{
+  "layer": "world_models",
+  "params": {
+    "purpose": "lewm_bridge, coherence_audit, correction, ablation"
+  },
+  "status": "skeleton",
+  "version": "0.1.0"
+}

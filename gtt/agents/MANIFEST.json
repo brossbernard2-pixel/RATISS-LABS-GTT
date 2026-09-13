@@ -1,0 +1,8 @@
+{
+  "layer": "agents",
+  "params": {
+    "purpose": "orchestrator, red/blue wrappers, protocol"
+  },
+  "status": "skeleton",
+  "version": "0.1.0"
+}

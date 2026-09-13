@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ratiss-labs-gtt"
+version = "0.1.0"
+description = "GTT — Geological Topological Tech : un repo, neuf couches, une loi R7, une hypothèse testée LCT, une méthode rouge/bleu."
+requires-python = ">=3.9"
+
+[tool.setuptools.packages.find]
+include = ["gtt*"]

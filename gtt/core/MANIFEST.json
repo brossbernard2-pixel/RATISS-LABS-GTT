@@ -1,0 +1,8 @@
+{
+  "layer": "core",
+  "params": {
+    "purpose": "topologie, thermodynamique, invariants, hypotheses LCT/P_sig"
+  },
+  "status": "skeleton",
+  "version": "0.1.0"
+}

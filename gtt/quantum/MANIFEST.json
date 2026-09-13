@@ -1,0 +1,8 @@
+{
+  "layer": "quantum",
+  "params": {
+    "purpose": "lanczos, mps_dmrg, decoherence, qpu_connectors"
+  },
+  "status": "skeleton",
+  "version": "0.1.0"
+}
