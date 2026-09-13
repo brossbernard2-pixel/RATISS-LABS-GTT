@@ -14,15 +14,15 @@
     },
     {
       "layer": "forecast",
-      "sha256": "d88b955814cdf767732e0308de9bcffd8800854705a1b8b6d2c6a4086914ffc6"
+      "sha256": "d9f8727998e3f7541bfcf0943b095e1abc18574f9254c4f2bf4455b4c1c47b26"
     },
     {
       "layer": "agents",
-      "sha256": "c3c022393a896fd9f8263b2db57f12251bd9dfe4ce3fb7a270f77c2ace9a5ed7"
+      "sha256": "6c81d4614d28e9cdfa2d7e60ce9b3ca6b0d6e586ed6e80b3b9ebd8f229b82ab4"
     },
     {
       "layer": "receipts",
-      "sha256": "834891edbee48c456d111f6be1cce133554032112a5c68215b98d5353d2b5647"
+      "sha256": "e3898470a0e9feeb8bf6248ccb54894f1e9ccee4f47ef4b829a0daf6fab39637"
     },
     {
       "layer": "audit",
@@ -30,11 +30,11 @@
     },
     {
       "layer": "viz",
-      "sha256": "18cbdff903e3573e1a01776cead9827eda2e3bd773914db5b20a7398a0ff2f11"
+      "sha256": "5433d60115ef2694585d4fb68ab5208cbdb4f52ff00dff6d611211943c330cfc"
     },
     {
       "layer": "io",
-      "sha256": "5b2cf592377a13d96b1c26d0a5a68a5394f9d8fa4c3ca7224b26824f10d66d7b"
+      "sha256": "2a8914bd1a3913cb4e38bde765f08b39346f426d7aea1a65650ed85d082866e6"
     }
   ],
   "version": "0.1.0"

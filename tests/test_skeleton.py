@@ -46,12 +46,12 @@ EXPECTED_MANIFESTS = {
     "core": ("0.2.1", "implemented-p2-audit"),
     "quantum": ("0.2.0", "implemented-p3"),
     "world_models": ("0.2.0", "implemented-p4"),
-    "forecast": ("0.1.0", "skeleton"),
-    "agents": ("0.1.0", "skeleton"),
-    "receipts": ("0.1.0", "skeleton"),
+    "forecast": ("0.2.0", "implemented-p5"),
+    "agents": ("0.2.0", "implemented-p6"),
+    "receipts": ("0.2.0", "implemented-p6"),
     "audit": ("0.1.0", "skeleton"),
-    "viz": ("0.1.0", "skeleton"),
-    "io": ("0.1.0", "skeleton"),
+    "viz": ("0.2.0", "implemented-p6"),
+    "io": ("0.2.0", "implemented-p6"),
 }
 
 
@@ -118,7 +118,8 @@ def test_aucun_module_squelette_depasse_60_lignes():
     # Les couches squelettes (phases 3-7) restent <= 60 lignes ; la couche
     # core est réelle depuis la phase 2 (voir test_core_modules_bornes).
     for layer in LAYERS:
-        if layer in ("core", "quantum", "world_models", "viz", "io"):
+        if layer in ("core", "quantum", "world_models", "forecast", "agents",
+                     "receipts", "viz", "io"):
             continue  # core = calculs réels ; viz/io = docstrings
         for module in COUCHE_MODULES[layer]:
             path = GTT / layer / f"{module}.py"
@@ -131,7 +132,8 @@ def test_aucun_module_squelette_depasse_60_lignes():
 def test_core_modules_bornes():
     # Garde-fou : les couches calculées (core depuis la phase 2, quantum
     # depuis la phase 3) restent lisibles et sans dépendance externe.
-    for layer in ("core", "quantum", "world_models"):
+    for layer in ("core", "quantum", "world_models", "forecast", "agents",
+                      "receipts", "viz", "io"):
         for module in COUCHE_MODULES[layer]:
             path = GTT / layer / f"{module}.py"
             lines = path.read_text(encoding="utf-8").splitlines()

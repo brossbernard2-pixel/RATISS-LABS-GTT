@@ -1,8 +1,19 @@
 {
   "layer": "agents",
   "params": {
-    "purpose": "orchestrator, red/blue wrappers, protocol"
+    "approval_identity": "aucune (C3)",
+    "blue_wrapper": "rejeu uniquement (R7)",
+    "orchestrator": "registre d'etapes, aucune autorite",
+    "protocol_steps": [
+      "bleu-construit",
+      "rouge-audite",
+      "chef-arbitre",
+      "recu-r7",
+      "visa-provenance"
+    ],
+    "protocol_version": "1.0",
+    "red_wrapper": "primitives du juge uniquement, verdicts bruts"
   },
-  "status": "skeleton",
-  "version": "0.1.0"
+  "status": "implemented-p6",
+  "version": "0.2.0"
 }

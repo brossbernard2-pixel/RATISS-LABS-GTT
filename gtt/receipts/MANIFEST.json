@@ -1,8 +1,16 @@
 {
   "layer": "receipts",
   "params": {
-    "purpose": "lean_proof (EN ATTENTE), replayable_hash, verification"
+    "command_hash": "sha256 canonique {command, params}",
+    "lean_proof": "EN ATTENTE — aucun recu Lean fabrique (C5)",
+    "receipt_fields": [
+      "command",
+      "command_sha256",
+      "artifact_sha256",
+      "source"
+    ],
+    "verify": "coherence interne + format sha256"
   },
-  "status": "skeleton",
-  "version": "0.1.0"
+  "status": "implemented-p6",
+  "version": "0.2.0"
 }

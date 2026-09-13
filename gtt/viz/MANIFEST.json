@@ -1,8 +1,13 @@
 {
   "layer": "viz",
   "params": {
-    "purpose": "topology_3d, coherence_atlas, proof_graph (phase 6)"
+    "atlas": "heatmap gris [0,1] -> #000..#fff",
+    "deterministic": true,
+    "format": "svg-texte stdlib / dot-texte",
+    "graph": "dot digraph, aretes validees contre les noeuds",
+    "projection": "isometrique (x-z, y-z)",
+    "rounding": 3
   },
-  "status": "skeleton",
-  "version": "0.1.0"
+  "status": "implemented-p6",
+  "version": "0.2.0"
 }

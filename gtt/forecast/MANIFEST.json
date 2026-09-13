@@ -1,8 +1,17 @@
 {
   "layer": "forecast",
   "params": {
-    "purpose": "metaculus_bot, calibration, sealed_predictions, journal"
+    "baseline": "fixture hors-ligne deterministic",
+    "bins": 10,
+    "brier": "(p - o)^2",
+    "cap_questions": 200,
+    "journal": "chaine R5 via ratiss.journal (juge)",
+    "seal": "sha256 canonique via ratiss.seal",
+    "seeds": [
+      20260913
+    ],
+    "submit_predictions": "disabled-hard (jamais de soumission reelle dans le depot)"
   },
-  "status": "skeleton",
-  "version": "0.1.0"
+  "status": "implemented-p5",
+  "version": "0.2.0"
 }
