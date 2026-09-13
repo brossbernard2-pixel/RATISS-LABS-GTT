@@ -7,6 +7,7 @@ name = "ratiss-labs-gtt"
 version = "0.1.0"
 description = "GTT — Geological Topological Tech : un repo, neuf couches, une loi R7, une hypothèse testée LCT, une méthode rouge/bleu."
 requires-python = ">=3.9"
+dependencies = ["ratiss-framework @ git+https://github.com/brossbernard2-pixel/RATISS-Framework.git"]
 
 [tool.setuptools.packages.find]
 include = ["gtt*"]
