@@ -7,3 +7,5 @@ __pycache__/
 venv/
 build/
 dist/
+# artefact genere (terrain)
+examples/TERRAIN-01/grid.json

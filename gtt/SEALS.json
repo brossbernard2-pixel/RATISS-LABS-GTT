@@ -2,7 +2,7 @@
   "seals": [
     {
       "layer": "core",
-      "sha256": "17075fed11e6ba8dd0f4184a983dfee246cedfc0527b08abf5199b7460f34966"
+      "sha256": "bd65ed0b9bd6d63a1a76530379d868abcc1856a43ee9346a7f765240446277be"
     },
     {
       "layer": "quantum",

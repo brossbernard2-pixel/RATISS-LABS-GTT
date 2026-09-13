@@ -1,6 +1,6 @@
 """Wrapper bleu — défense constructive face au rapport juge.
 
-Le bleu ne « prouve » rien : il répond par des reproductions rejouables.
+Le bleu ne statue pas : il répond par des reproductions rejouables.
 Voir docs/PROTOCOL.md pour le rôle complet.
 """
 

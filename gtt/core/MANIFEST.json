@@ -1,8 +1,46 @@
 {
   "layer": "core",
+  "version": "0.2.0",
+  "status": "implemented-p2",
   "params": {
-    "purpose": "topologie, thermodynamique, invariants, hypotheses LCT/P_sig"
-  },
-  "status": "skeleton",
-  "version": "0.1.0"
+    "topology": {
+      "field": "Z2",
+      "max_bottleneck_exact_points": 50,
+      "filtration": "seuil croissant",
+      "truths": ["triangle", "tetraedre_s2", "tore_4x4", "sphères_disjointes"]
+    },
+    "thermodynamics": {
+      "shannon_bits": true,
+      "kl_gamma": 0.0,
+      "helmholtz_f": "U - T*S",
+      "seed": 20260913,
+      "steps_fluctuation": 40
+    },
+    "invariants": {
+      "tol_default": 1e-9,
+      "conservation": "max absolute deviation",
+      "symplecticite": "det == 1 sur R2",
+      "reversibilite_steps": 5
+    },
+    "coherence": {
+      "range": [0, 1],
+      "weighted": true,
+      "min_invariants": 1
+    },
+    "hypotheses": {
+      "LCT": {
+        "status": "HYPOTHESIS",
+        "takens_dim": 2,
+        "window": 240,
+        "refutation_metric": "psig_mean_abs",
+        "refutation_threshold": 0.01
+      },
+      "P_sig": {
+        "status": "HYPOTHESIS",
+        "area_norm": "trapezoid",
+        "refutation_metric": "psig_cv",
+        "refutation_threshold": 0.5
+      }
+    }
+  }
 }

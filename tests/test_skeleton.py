@@ -23,7 +23,7 @@ LAYERS = (
 
 # (module de couche, éventuel attr attendu)
 COUCHE_MODULES = {
-    "core": ["topology", "thermodynamics", "hypotheses", "invariants"],
+    "core": ["topology", "thermodynamics", "hypotheses", "invariants", "coherence"],
     "quantum": ["lanczos", "mps_dmrg", "decoherence", "qpu_connectors"],
     "world_models": ["lewm_bridge", "coherence_audit", "correction", "ablation"],
     "forecast": ["metaculus_bot", "calibration", "sealed_predictions", "journal"],
@@ -41,14 +41,29 @@ def test_neuf_layers_importables():
             importlib.import_module(f"gtt.{layer}.{module}")
 
 
+# version et statut attendus par couche (phase 2 : core réel, autres squelettes)
+EXPECTED_MANIFESTS = {
+    "core": ("0.2.0", "implemented-p2"),
+    "quantum": ("0.1.0", "skeleton"),
+    "world_models": ("0.1.0", "skeleton"),
+    "forecast": ("0.1.0", "skeleton"),
+    "agents": ("0.1.0", "skeleton"),
+    "receipts": ("0.1.0", "skeleton"),
+    "audit": ("0.1.0", "skeleton"),
+    "viz": ("0.1.0", "skeleton"),
+    "io": ("0.1.0", "skeleton"),
+}
+
+
 def test_manifests_presents():
     for layer in LAYERS:
         manifest_path = GTT / layer / "MANIFEST.json"
         assert manifest_path.is_file(), f"MANIFEST manquant : {layer}"
         data = json.loads(manifest_path.read_text(encoding="utf-8"))
         assert data["layer"] == layer
-        assert data["version"] == "0.1.0"
-        assert data["status"] == "skeleton"
+        version, status = EXPECTED_MANIFESTS[layer]
+        assert data["version"] == version, f"{layer}: version {data['version']}"
+        assert data["status"] == status, f"{layer}: statut {data['status']}"
 
 
 def test_seals_json_alignes():
@@ -99,13 +114,24 @@ def test_hypotheses_lct_et_psig():
     assert hypotheses.P_SIG_HYPOTHESIS.name == "P_sig"
 
 
-def test_aucun_module_couche_depasse_60_lignes():
+def test_aucun_module_squelette_depasse_60_lignes():
+    # Les couches squelettes (phases 3-7) restent <= 60 lignes ; la couche
+    # core est réelle depuis la phase 2 (voir test_core_modules_bornes).
     for layer in LAYERS:
-        if layer in ("viz", "io"):
-            continue  # docstrings phase 6, modules quasi vides
+        if layer in ("core", "viz", "io"):
+            continue  # core = calculs réels ; viz/io = docstrings
         for module in COUCHE_MODULES[layer]:
             path = GTT / layer / f"{module}.py"
             lines = path.read_text(encoding="utf-8").splitlines()
             nonblank = [ln for ln in lines if ln.strip()]
             assert len(lines) <= 60, f"{layer}/{module}.py : {len(lines)} lignes"
             assert len(nonblank) <= 60
+
+
+def test_core_modules_bornes():
+    # Garde-fou : la couche core est calculée, mais chaque module doit rester
+    # lisible et sans dépendance externe (voir les tests core).
+    for module in COUCHE_MODULES["core"]:
+        path = GTT / "core" / f"{module}.py"
+        lines = path.read_text(encoding="utf-8").splitlines()
+        assert len(lines) <= 250, f"core/{module}.py : {len(lines)} lignes"

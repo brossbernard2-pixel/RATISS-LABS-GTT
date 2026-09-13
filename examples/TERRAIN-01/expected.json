@@ -1,0 +1,16 @@
+{
+  "betti_reseau": [
+    1,
+    12
+  ],
+  "coherence_score": 1.0,
+  "invariants": {
+    "conservation_rms_ok": true,
+    "reversibilite_ok": true,
+    "symplecticite_ok": true
+  },
+  "psig_max_abs": 647.409432646,
+  "psig_mean_abs": 646.647378733,
+  "seed": 20260913,
+  "terrain": "TERRAIN-01"
+}

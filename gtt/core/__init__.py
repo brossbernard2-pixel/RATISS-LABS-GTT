@@ -1,7 +1,9 @@
-"""Couche core — topologie, thermodynamique, invariants, hypothèses.
+"""Couche core — topologie, thermodynamique, invariants, cohérence.
 
-Phase 1 : squelette. Les outils calculés arrivent aux phases 2–3 via les
-dépôts sources listés dans gtt/audit/PROVENANCE.md.
+Phase 2 : outils réels (complexes simpliciaux Z2, entropie/énergie libre,
+invariants, score de cohérence, hypothèses scellées LCT/P_sig).
+Réécriture provenancée — voir gtt/audit/PROVENANCE.md.
 """
 
-__all__ = ["topology", "thermodynamics", "hypotheses", "invariants"]
+__all__ = ["topology", "thermodynamics", "invariants", "coherence",
+           "hypotheses"]
