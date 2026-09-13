@@ -78,7 +78,7 @@ Kit de rejeu indépendant : [`docs/AUDIT-INDEPENDANT-KIT.md`](docs/AUDIT-INDEPEN
 ```bash
 pip install "ratiss-framework @ git+https://github.com/brossbernard2-pixel/RATISS-Framework.git"
 pip install -e .
-python -m pytest -q          # 102 tests, stdlib seulement
+python -m pytest -q          # 108 tests, stdlib seulement (dont 6 gardiens hors-ligne du run externe)
 python -m gtt.judge --ci     # exit 0 = sceaux intacts
 python scripts/wm_check.py && python scripts/quantum_check.py \
   && python scripts/forecast_check.py && python scripts/agents_check.py \

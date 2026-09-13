@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Audit indépendant GTT — tout rejouer en une commande (kit : docs/AUDIT-INDEPENDANT-KIT.md).
-# Clone frais, installation, 102 tests, juge, 5 checks, rejeux ×2, hygiène,
+# Clone frais, installation, 108 tests, juge, 5 checks, rejeux ×2, hygiène,
 # puis formulaire de verdict. Le run externe LeWM (dépendances lourdes) est
 # proposé mais jamais imposé. Aucune confiance : tout est rejoué.
 set -u
@@ -15,7 +15,7 @@ pip install -q "ratiss-framework @ git+https://github.com/brossbernard2-pixel/RA
 pip install -q -e . >/dev/null 2>&1 || { echo "ÉCHEC install"; exit 1; }
 FAIL=0
 echo "== tests =="
-python -m pytest -q -p no:cacheprovider 2>&1 | tail -1 | grep -q "102 passed" && echo "pytest : 102 passed ✔" || { echo "pytest : ÉCHEC ✗"; FAIL=1; }
+python -m pytest -q -p no:cacheprovider 2>&1 | tail -1 | grep -q "108 passed" && echo "pytest : 108 passed ✔" || { echo "pytest : ÉCHEC ✗"; FAIL=1; }
 echo "== juge =="
 python -m gtt.judge --ci >/dev/null 2>&1 && echo "judge : exit 0 ✔" || { echo "judge : ÉCHEC ✗"; FAIL=1; }
 echo "== 5 checks déterministes =="

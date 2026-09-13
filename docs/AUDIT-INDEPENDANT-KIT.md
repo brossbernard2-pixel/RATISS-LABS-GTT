@@ -28,7 +28,7 @@ remplir. Sortie attendue en fin : `FORMULAIRE PRÊT — à signer par l'auditeur
 git clone https://github.com/brossbernard2-pixel/RATISS-LABS-GTT.git && cd RATISS-LABS-GTT
 pip install "ratiss-framework @ git+https://github.com/brossbernard2-pixel/RATISS-Framework.git"
 pip install -e .
-python -m pytest -q                    # ATTENDU : 102 passed
+python -m pytest -q                    # ATTENDU : 108 passed (102 + 6 gardiens hors-ligne du run externe)
 python -m gtt.judge --ci; echo $?      # ATTENDU : 0
 python scripts/wm_check.py       | tail -1   # ATTENDU : RESULTAT: CONFORME
 python scripts/quantum_check.py  | tail -1   # ATTENDU : RESULTAT: CONFORME
@@ -39,6 +39,13 @@ for p in 4 5 6 7; do bash scripts/replay_phase$p.sh; done
 # ATTENDU : exit 0 à chaque fois, reçus proofs/PHASE*-REPLAY-*.md ;
 # deux runs consécutifs → reçus byte-identiques hors horodatage.
 ```
+
+Le gardien hors-ligne du run externe
+(`tests/integration/test_wm_coherence_external.py`, inclus dans les 108)
+verrouille : certificat canonique byte-identique, reçus immuables
+(SHA-256), paramètres R6 du script, chiffres publiés verbatim. S'il
+échoue sur un commit futur → blocage immédiat : quelqu'un a altéré un
+artefact scellé.
 
 ## 3. Valeurs scellées à comparer (vérités déterministes)
 
@@ -101,7 +108,7 @@ AUDIT INDÉPENDANT GTT
 Auditeur (identité) : ______________________
 Commit rejoué (SHA) : ______________________
 Date (UTC)          : ______________________
-pytest 102 passed   : OUI / NON
+pytest 108 passed   : OUI / NON
 judge exit 0        : OUI / NON
 5 checks CONFORME   : OUI / NON
 rejeux ×2 identiques: OUI / NON

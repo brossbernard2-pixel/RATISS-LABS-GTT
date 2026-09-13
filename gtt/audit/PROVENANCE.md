@@ -90,3 +90,17 @@ publiées dans le reçu ; V1 retenue. (2) Portée : une trajectoire, un seed
 (3) transformers v4 exigé (nommage ViT du checkpoint) ; versions exactes
 dans le reçu. (4) Run construit et exécuté par Rouge en relais (ordre du
 chef) — auditeur indépendant EN ATTENTE, kit : docs/AUDIT-INDEPENDANT-KIT.md.
+
+## Intégration « GO 1-4 » (ordre du chef 2026-09-13, étape 5 gelée — R3)
+
+| artefact | nature | empreinte | visa chef |
+|---|---|---|---|
+| docs/certifications/external/2026-09-13_CERT-GTT-WM-LEWM-EXT-v1.md | copie canonique BYTE-IDENTIQUE du certificat (aucune reformulation) | sha256 `b300911feb17f6cd33c12ffa931b655514691d36b002f7f516cb98b6514735b6` | EN ATTENTE |
+| tests/integration/test_wm_coherence_external.py | test gardien hors-ligne (6 tests stdlib : scellés, reçus, chiffres, verrous) | original | EN ATTENTE |
+| docs/AUDIT_TRAIL.md | journal public des états d'audit (EN ATTENTE visibles) | original | EN ATTENTE |
+| docs/GTT_CARTOGRAPHY.md | extrait public de la cartographie privée du chef + ancrage T5 « preuve vivante v1 » | original (cartographie complète reste privée) | EN ATTENTE |
+
+Décision R3 journalisée : la fusion/monolithe + archivage de GTT
+(« étape 5 ») est GELÉE indéfiniment — les deux dépôts restent séparés
+(juge/jugé). Suite de tests : 102 → 108 (les certificats antérieurs
+citant « 102 tests » décrivent leur commit d'époque et restent immuables).
