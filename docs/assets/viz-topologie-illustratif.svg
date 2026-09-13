@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360">
+<rect width="360" height="360" fill="#ffffff"/>
+<text x="8" y="16" font-size="12" fill="#333">diagramme de persistance — plafond 1.32</text>
+<line x1="36.0" y1="223.2" x2="324.0" y2="223.2" stroke="#888888" stroke-width="1"/>
+<circle cx="180.0" cy="157.745" r="3" fill="#c0392b"/>
+<circle cx="194.171" cy="84.109" r="3" fill="#c0392b"/>
+<circle cx="222.514" cy="157.745" r="3" fill="#c0392b"/>
+<circle cx="265.028" cy="75.927" r="3" fill="#c0392b"/>
+<circle cx="180.0" cy="72.0" r="3" fill="#2980b9"/>
+<line x1="180.0" y1="72.0" x2="180.0" y2="60.0" stroke="#2980b9" stroke-width="1"/>
+</svg>
