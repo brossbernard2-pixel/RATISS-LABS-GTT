@@ -1,46 +1,55 @@
 {
   "layer": "core",
-  "version": "0.2.0",
-  "status": "implemented-p2",
   "params": {
-    "topology": {
-      "field": "Z2",
-      "max_bottleneck_exact_points": 50,
-      "filtration": "seuil croissant",
-      "truths": ["triangle", "tetraedre_s2", "tore_4x4", "sphères_disjointes"]
-    },
-    "thermodynamics": {
-      "shannon_bits": true,
-      "kl_gamma": 0.0,
-      "helmholtz_f": "U - T*S",
-      "seed": 20260913,
-      "steps_fluctuation": 40
-    },
-    "invariants": {
-      "tol_default": 1e-9,
-      "conservation": "max absolute deviation",
-      "symplecticite": "det == 1 sur R2",
-      "reversibilite_steps": 5
-    },
     "coherence": {
-      "range": [0, 1],
-      "weighted": true,
-      "min_invariants": 1
+      "min_invariants": 1,
+      "range": [
+        0,
+        1
+      ],
+      "weighted": true
     },
     "hypotheses": {
       "LCT": {
+        "refutation_metric": "psig_mean_abs",
+        "refutation_threshold": 0.01,
         "status": "HYPOTHESIS",
         "takens_dim": 2,
-        "window": 240,
-        "refutation_metric": "psig_mean_abs",
-        "refutation_threshold": 0.01
+        "window": 240
       },
       "P_sig": {
-        "status": "HYPOTHESIS",
         "area_norm": "trapezoid",
         "refutation_metric": "psig_cv",
-        "refutation_threshold": 0.5
+        "refutation_threshold": 0.5,
+        "status": "HYPOTHESIS"
       }
+    },
+    "invariants": {
+      "conservation": "max absolute deviation",
+      "reversibilite_steps": 5,
+      "symplecticite": "det == 1 sur R2",
+      "tol_default": 1e-09
+    },
+    "thermodynamics": {
+      "helmholtz_f": "U - T*S",
+      "kl_gamma": 0.0,
+      "seed": 20260913,
+      "shannon_bits": true,
+      "steps_fluctuation": 40
+    },
+    "topology": {
+      "audit_fix": "classes-essentielles-dim>=1 (2026-09-13)",
+      "field": "Z2",
+      "filtration": "seuil croissant",
+      "max_bottleneck_exact_points": 50,
+      "truths": [
+        "triangle",
+        "tetraedre_s2",
+        "tore_4x4",
+        "sphères_disjointes"
+      ]
     }
-  }
+  },
+  "status": "implemented-p2-audit",
+  "version": "0.2.1"
 }

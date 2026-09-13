@@ -64,14 +64,13 @@ def persistent_pairs(K: list[tuple[int, ...]], values: list[float]
         for f in faces(K[orig]):
             if f in tup2idx:
                 cols[j].add(tup2idx[f])
-    init_empty = {j for j, c in enumerate(cols) if not c}
     red, pairs = reduce_boundary(cols)
     paired_low = set(pairs)
     dgm = {d: [] for d in set(dims)}
     for i, j in pairs.items():
         dgm[dims[i]].append((values[order[i]], values[order[j]]))
     for i in range(len(order)):
-        if i in init_empty and i not in paired_low:
+        if not red[i] and i not in paired_low:
             dgm[dims[i]].append((values[order[i]], float("inf")))
     return dgm
 

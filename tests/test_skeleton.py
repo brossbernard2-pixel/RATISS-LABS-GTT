@@ -43,7 +43,7 @@ def test_neuf_layers_importables():
 
 # version et statut attendus par couche (phase 2 : core réel, autres squelettes)
 EXPECTED_MANIFESTS = {
-    "core": ("0.2.0", "implemented-p2"),
+    "core": ("0.2.1", "implemented-p2-audit"),
     "quantum": ("0.1.0", "skeleton"),
     "world_models": ("0.1.0", "skeleton"),
     "forecast": ("0.1.0", "skeleton"),

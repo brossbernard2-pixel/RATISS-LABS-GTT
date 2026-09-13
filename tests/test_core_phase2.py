@@ -95,6 +95,27 @@ def test_persistance_triangle():
     assert dgm[1] == [(1.0, 2.0)]
 
 
+def test_persistance_essentielle_dim1_cercle():
+    """Régression (audit Rouge 2026-09-13) : le cercle a UNE classe
+    essentielle en dimension 1 — les colonnes vidées par réduction (et non
+    low d'une autre) sont essentielles, pas seulement les colonnes initialement
+    vides."""
+    dgm = persistent_pairs(_cercle(), [0.0] * 8)
+    assert dgm[1] == [(0.0, float("inf"))]
+    assert sum(1 for _, b in dgm[0] if b == float("inf")) == 1
+
+
+def test_persistance_essentielles_egales_betti_tore():
+    """Régression : sur filtration unique, le compte des classes essentielles
+    par dimension doit égaler les nombres de Betti (tore 4x4 = (1, 2, 1))."""
+    K = _tore_4x4()
+    dgm = persistent_pairs(K, [0.0] * len(K))
+    b = betti_numbers(K)
+    ess = tuple(sum(1 for _, m in dgm.get(d, []) if m == float("inf"))
+                for d in range(len(b)))
+    assert ess == b == (1, 2, 1)
+
+
 # ---------- Bottleneck ----------
 
 def test_bottleneck_identical():
